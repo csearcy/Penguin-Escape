@@ -15,6 +15,22 @@
 		977999501C72984700F86B8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9779994E1C72984700F86B8D /* LaunchScreen.storyboard */; };
 		9779995B1C72984700F86B8D /* Penguin_EscapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779995A1C72984700F86B8D /* Penguin_EscapeTests.swift */; };
 		977999661C72984700F86B8D /* Penguin_EscapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999651C72984700F86B8D /* Penguin_EscapeUITests.swift */; };
+		977999741C729B3700F86B8D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999731C729B3700F86B8D /* GameScene.swift */; };
+		977999781C74113600F86B8D /* bee.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 977999771C74113600F86B8D /* bee.atlas */; };
+		9779997A1C74221700F86B8D /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999791C74221700F86B8D /* GameSprite.swift */; };
+		9779997C1C74234A00F86B8D /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779997B1C74234A00F86B8D /* Bee.swift */; };
+		9779997E1C74263A00F86B8D /* ground.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9779997D1C74263A00F86B8D /* ground.atlas */; };
+		977999801C74265000F86B8D /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779997F1C74265000F86B8D /* Ground.swift */; };
+		977999821C742B5B00F86B8D /* pierre.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 977999811C742B5B00F86B8D /* pierre.atlas */; };
+		977999841C742B8100F86B8D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999831C742B8100F86B8D /* Player.swift */; };
+		97F8DE2E1C75455500A129F8 /* goods.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 97F8DE2D1C75455500A129F8 /* goods.atlas */; };
+		97F8DE301C75457500A129F8 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE2F1C75457500A129F8 /* Star.swift */; };
+		97F8DE321C75483700A129F8 /* enemies.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 97F8DE311C75483700A129F8 /* enemies.atlas */; };
+		97F8DE341C75484C00A129F8 /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE331C75484C00A129F8 /* MadFly.swift */; };
+		97F8DE361C7549BF00A129F8 /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE351C7549BF00A129F8 /* Bat.swift */; };
+		97F8DE381C754A3E00A129F8 /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE371C754A3E00A129F8 /* Ghost.swift */; };
+		97F8DE3A1C754BC700A129F8 /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE391C754BC700A129F8 /* Blade.swift */; };
+		97F8DE3C1C754D3C00A129F8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE3B1C754D3C00A129F8 /* Coin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,22 @@
 		977999611C72984700F86B8D /* Penguin EscapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Penguin EscapeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		977999651C72984700F86B8D /* Penguin_EscapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Penguin_EscapeUITests.swift; sourceTree = "<group>"; };
 		977999671C72984700F86B8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977999731C729B3700F86B8D /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		977999771C74113600F86B8D /* bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bee.atlas; sourceTree = "<group>"; };
+		977999791C74221700F86B8D /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
+		9779997B1C74234A00F86B8D /* Bee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
+		9779997D1C74263A00F86B8D /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ground.atlas; sourceTree = "<group>"; };
+		9779997F1C74265000F86B8D /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		977999811C742B5B00F86B8D /* pierre.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pierre.atlas; sourceTree = "<group>"; };
+		977999831C742B8100F86B8D /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		97F8DE2D1C75455500A129F8 /* goods.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goods.atlas; sourceTree = "<group>"; };
+		97F8DE2F1C75457500A129F8 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		97F8DE311C75483700A129F8 /* enemies.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = enemies.atlas; sourceTree = "<group>"; };
+		97F8DE331C75484C00A129F8 /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
+		97F8DE351C7549BF00A129F8 /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
+		97F8DE371C754A3E00A129F8 /* Ghost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
+		97F8DE391C754BC700A129F8 /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
+		97F8DE3B1C754D3C00A129F8 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +131,29 @@
 		977999421C72984700F86B8D /* Penguin Escape */ = {
 			isa = PBXGroup;
 			children = (
-				977999431C72984700F86B8D /* AppDelegate.swift */,
+				977999771C74113600F86B8D /* bee.atlas */,
+				97F8DE311C75483700A129F8 /* enemies.atlas */,
+				97F8DE2D1C75455500A129F8 /* goods.atlas */,
+				9779997D1C74263A00F86B8D /* ground.atlas */,
+				977999811C742B5B00F86B8D /* pierre.atlas */,
+				977999511C72984700F86B8D /* Info.plist */,
 				977999451C72984700F86B8D /* art.scnassets */,
+				977999431C72984700F86B8D /* AppDelegate.swift */,
+				97F8DE351C7549BF00A129F8 /* Bat.swift */,
+				9779997B1C74234A00F86B8D /* Bee.swift */,
+				97F8DE391C754BC700A129F8 /* Blade.swift */,
+				97F8DE3B1C754D3C00A129F8 /* Coin.swift */,
+				977999731C729B3700F86B8D /* GameScene.swift */,
+				977999791C74221700F86B8D /* GameSprite.swift */,
 				977999471C72984700F86B8D /* GameViewController.swift */,
-				977999491C72984700F86B8D /* Main.storyboard */,
+				97F8DE371C754A3E00A129F8 /* Ghost.swift */,
+				9779997F1C74265000F86B8D /* Ground.swift */,
+				97F8DE331C75484C00A129F8 /* MadFly.swift */,
+				977999831C742B8100F86B8D /* Player.swift */,
+				97F8DE2F1C75457500A129F8 /* Star.swift */,
 				9779994C1C72984700F86B8D /* Assets.xcassets */,
 				9779994E1C72984700F86B8D /* LaunchScreen.storyboard */,
-				977999511C72984700F86B8D /* Info.plist */,
+				977999491C72984700F86B8D /* Main.storyboard */,
 			);
 			path = "Penguin Escape";
 			sourceTree = "<group>";
@@ -235,7 +283,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F8DE321C75483700A129F8 /* enemies.atlas in Resources */,
+				9779997E1C74263A00F86B8D /* ground.atlas in Resources */,
+				977999781C74113600F86B8D /* bee.atlas in Resources */,
+				97F8DE2E1C75455500A129F8 /* goods.atlas in Resources */,
 				977999461C72984700F86B8D /* art.scnassets in Resources */,
+				977999821C742B5B00F86B8D /* pierre.atlas in Resources */,
 				977999501C72984700F86B8D /* LaunchScreen.storyboard in Resources */,
 				9779994D1C72984700F86B8D /* Assets.xcassets in Resources */,
 				9779994B1C72984700F86B8D /* Main.storyboard in Resources */,
@@ -263,8 +316,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977999801C74265000F86B8D /* Ground.swift in Sources */,
+				9779997C1C74234A00F86B8D /* Bee.swift in Sources */,
+				97F8DE3A1C754BC700A129F8 /* Blade.swift in Sources */,
+				9779997A1C74221700F86B8D /* GameSprite.swift in Sources */,
+				977999741C729B3700F86B8D /* GameScene.swift in Sources */,
+				97F8DE381C754A3E00A129F8 /* Ghost.swift in Sources */,
+				977999841C742B8100F86B8D /* Player.swift in Sources */,
+				97F8DE361C7549BF00A129F8 /* Bat.swift in Sources */,
+				97F8DE3C1C754D3C00A129F8 /* Coin.swift in Sources */,
 				977999481C72984700F86B8D /* GameViewController.swift in Sources */,
 				977999441C72984700F86B8D /* AppDelegate.swift in Sources */,
+				97F8DE341C75484C00A129F8 /* MadFly.swift in Sources */,
+				97F8DE301C75457500A129F8 /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CMSDevelopment.Penguin-Escape";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -419,6 +484,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CMSDevelopment.Penguin-Escape";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -491,6 +557,7 @@
 				9779996C1C72984700F86B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9779996D1C72984700F86B8D /* Build configuration list for PBXNativeTarget "Penguin EscapeTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +566,7 @@
 				9779996F1C72984700F86B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		977999701C72984700F86B8D /* Build configuration list for PBXNativeTarget "Penguin EscapeUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +575,7 @@
 				977999721C72984700F86B8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
