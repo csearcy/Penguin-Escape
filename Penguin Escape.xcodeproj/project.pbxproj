@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9724DBC71C769E39009A813C /* hud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9724DBC61C769E39009A813C /* hud.atlas */; };
+		9724DBC91C769E6C009A813C /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724DBC81C769E6C009A813C /* HUD.swift */; };
+		9724DBCB1C76AE80009A813C /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724DBCA1C76AE80009A813C /* Background.swift */; };
+		9724DBCE1C76C419009A813C /* PlayerPath.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9724DBCC1C76C419009A813C /* PlayerPath.sks */; };
+		9724DBCF1C76C419009A813C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9724DBCD1C76C419009A813C /* spark.png */; };
+		9724DBD11C76CE62009A813C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724DBD01C76CE62009A813C /* MenuScene.swift */; };
+		975BC1E31C77DB8F00DF8150 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 975BC1E21C77DB8F00DF8150 /* Sound */; };
 		977999441C72984700F86B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999431C72984700F86B8D /* AppDelegate.swift */; };
 		977999461C72984700F86B8D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 977999451C72984700F86B8D /* art.scnassets */; };
 		977999481C72984700F86B8D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999471C72984700F86B8D /* GameViewController.swift */; };
@@ -31,6 +38,10 @@
 		97F8DE381C754A3E00A129F8 /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE371C754A3E00A129F8 /* Ghost.swift */; };
 		97F8DE3A1C754BC700A129F8 /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE391C754BC700A129F8 /* Blade.swift */; };
 		97F8DE3C1C754D3C00A129F8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE3B1C754D3C00A129F8 /* Coin.swift */; };
+		97F8DE411C7565F900A129F8 /* EncounterBats.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97F8DE401C7565F900A129F8 /* EncounterBats.sks */; };
+		97F8DE431C75688700A129F8 /* EncounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F8DE421C75688700A129F8 /* EncounterManager.swift */; };
+		97F8DE451C757C7600A129F8 /* EncounterBees.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97F8DE441C757C7600A129F8 /* EncounterBees.sks */; };
+		97F8DE471C757C9300A129F8 /* EncounterCoins.sks in Resources */ = {isa = PBXBuildFile; fileRef = 97F8DE461C757C9300A129F8 /* EncounterCoins.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9724DBC61C769E39009A813C /* hud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hud.atlas; sourceTree = "<group>"; };
+		9724DBC81C769E6C009A813C /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		9724DBCA1C76AE80009A813C /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		9724DBCC1C76C419009A813C /* PlayerPath.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerPath.sks; sourceTree = "<group>"; };
+		9724DBCD1C76C419009A813C /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		9724DBD01C76CE62009A813C /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		975BC1E21C77DB8F00DF8150 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 		977999401C72984700F86B8D /* Penguin Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Penguin Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		977999431C72984700F86B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		977999451C72984700F86B8D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -81,6 +99,10 @@
 		97F8DE371C754A3E00A129F8 /* Ghost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
 		97F8DE391C754BC700A129F8 /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
 		97F8DE3B1C754D3C00A129F8 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		97F8DE401C7565F900A129F8 /* EncounterBats.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterBats.sks; sourceTree = "<group>"; };
+		97F8DE421C75688700A129F8 /* EncounterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterManager.swift; sourceTree = "<group>"; };
+		97F8DE441C757C7600A129F8 /* EncounterBees.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterBees.sks; sourceTree = "<group>"; };
+		97F8DE461C757C9300A129F8 /* EncounterCoins.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterCoins.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +153,9 @@
 		977999421C72984700F86B8D /* Penguin Escape */ = {
 			isa = PBXGroup;
 			children = (
+				975BC1E21C77DB8F00DF8150 /* Sound */,
+				9724DBC61C769E39009A813C /* hud.atlas */,
+				97F8DE3D1C7556FE00A129F8 /* Encounters */,
 				977999771C74113600F86B8D /* bee.atlas */,
 				97F8DE311C75483700A129F8 /* enemies.atlas */,
 				97F8DE2D1C75455500A129F8 /* goods.atlas */,
@@ -140,6 +165,12 @@
 				977999451C72984700F86B8D /* art.scnassets */,
 				977999431C72984700F86B8D /* AppDelegate.swift */,
 				97F8DE351C7549BF00A129F8 /* Bat.swift */,
+				9724DBCC1C76C419009A813C /* PlayerPath.sks */,
+				9724DBCD1C76C419009A813C /* spark.png */,
+				9724DBCA1C76AE80009A813C /* Background.swift */,
+				9724DBC81C769E6C009A813C /* HUD.swift */,
+				97F8DE421C75688700A129F8 /* EncounterManager.swift */,
+				9724DBD01C76CE62009A813C /* MenuScene.swift */,
 				9779997B1C74234A00F86B8D /* Bee.swift */,
 				97F8DE391C754BC700A129F8 /* Blade.swift */,
 				97F8DE3B1C754D3C00A129F8 /* Coin.swift */,
@@ -174,6 +205,16 @@
 				977999671C72984700F86B8D /* Info.plist */,
 			);
 			path = "Penguin EscapeUITests";
+			sourceTree = "<group>";
+		};
+		97F8DE3D1C7556FE00A129F8 /* Encounters */ = {
+			isa = PBXGroup;
+			children = (
+				97F8DE401C7565F900A129F8 /* EncounterBats.sks */,
+				97F8DE441C757C7600A129F8 /* EncounterBees.sks */,
+				97F8DE461C757C9300A129F8 /* EncounterCoins.sks */,
+			);
+			name = Encounters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +328,17 @@
 				9779997E1C74263A00F86B8D /* ground.atlas in Resources */,
 				977999781C74113600F86B8D /* bee.atlas in Resources */,
 				97F8DE2E1C75455500A129F8 /* goods.atlas in Resources */,
+				97F8DE411C7565F900A129F8 /* EncounterBats.sks in Resources */,
 				977999461C72984700F86B8D /* art.scnassets in Resources */,
+				9724DBC71C769E39009A813C /* hud.atlas in Resources */,
+				97F8DE451C757C7600A129F8 /* EncounterBees.sks in Resources */,
 				977999821C742B5B00F86B8D /* pierre.atlas in Resources */,
+				97F8DE471C757C9300A129F8 /* EncounterCoins.sks in Resources */,
+				9724DBCF1C76C419009A813C /* spark.png in Resources */,
 				977999501C72984700F86B8D /* LaunchScreen.storyboard in Resources */,
+				9724DBCE1C76C419009A813C /* PlayerPath.sks in Resources */,
 				9779994D1C72984700F86B8D /* Assets.xcassets in Resources */,
+				975BC1E31C77DB8F00DF8150 /* Sound in Resources */,
 				9779994B1C72984700F86B8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,15 +364,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9724DBD11C76CE62009A813C /* MenuScene.swift in Sources */,
 				977999801C74265000F86B8D /* Ground.swift in Sources */,
+				97F8DE431C75688700A129F8 /* EncounterManager.swift in Sources */,
 				9779997C1C74234A00F86B8D /* Bee.swift in Sources */,
 				97F8DE3A1C754BC700A129F8 /* Blade.swift in Sources */,
 				9779997A1C74221700F86B8D /* GameSprite.swift in Sources */,
 				977999741C729B3700F86B8D /* GameScene.swift in Sources */,
+				9724DBC91C769E6C009A813C /* HUD.swift in Sources */,
 				97F8DE381C754A3E00A129F8 /* Ghost.swift in Sources */,
 				977999841C742B8100F86B8D /* Player.swift in Sources */,
 				97F8DE361C7549BF00A129F8 /* Bat.swift in Sources */,
 				97F8DE3C1C754D3C00A129F8 /* Coin.swift in Sources */,
+				9724DBCB1C76AE80009A813C /* Background.swift in Sources */,
 				977999481C72984700F86B8D /* GameViewController.swift in Sources */,
 				977999441C72984700F86B8D /* AppDelegate.swift in Sources */,
 				97F8DE341C75484C00A129F8 /* MadFly.swift in Sources */,

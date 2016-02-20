@@ -23,6 +23,10 @@ class MadFly: SKSpriteNode, GameSprite {
 		self.runAction(flyAnimation)
 		self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
 		self.physicsBody?.affectedByGravity = false
+		
+		// Assign categories to physics bodies
+		self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
+		self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
 	}
 	
 	func createAnimations() {

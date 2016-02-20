@@ -10,25 +10,35 @@ import UIKit
 import QuartzCore
 import SceneKit
 import SpriteKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 
+	var musicPlayer = AVAudioPlayer()
+	
 	override func viewWillLayoutSubviews() {
 		
 		super.viewWillLayoutSubviews()
 		
-		let scene = GameScene()
+		let menuScene = MenuScene()
 		let skView = self.view as! SKView
 		
-		skView.showsFPS =  true
-		skView.showsNodeCount = true
 		skView.ignoresSiblingOrder = true
-		scene.scaleMode = .AspectFill
+		menuScene.size = view.bounds.size
+		skView.presentScene(menuScene)
 		
-		scene.size = view.bounds.size
-		skView.presentScene(scene)
+		// Add background music
+		let musicUrl = NSBundle.mainBundle().URLForResource("Sound/BackgroundMusic.m4a", withExtension: nil)
+		if let url = musicUrl {
+			do { musicPlayer =  try AVAudioPlayer(contentsOfURL: url, fileTypeHint:nil)}
+			catch let error as NSError { print(error.description) }
+			musicPlayer.numberOfLoops = -1
+			musicPlayer.prepareToPlay()
+			musicPlayer.play()
+		}
 		
 	}
+	
     func handleTap(gestureRecognize: UIGestureRecognizer) {
 		
 	}

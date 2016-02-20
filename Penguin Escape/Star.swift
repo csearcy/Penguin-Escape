@@ -25,6 +25,9 @@ class Star: SKSpriteNode, GameSprite {
 		self.texture = textureAtlas.textureNamed("power-up-star.png")
 		self.runAction(pulseAnimation)
 		
+		// Assign categories to physics bodies
+		self.physicsBody?.categoryBitMask = PhysicsCategory.powerup.rawValue
+		
 	}
 	
 	func createAnimations() {

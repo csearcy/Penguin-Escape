@@ -24,6 +24,10 @@ class Blade: SKSpriteNode, GameSprite {
 		self.physicsBody?.dynamic = false
 		createAnimations()
 		self.runAction(spinAnimation)
+		
+		// Assign categories to physics bodies
+		self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
+		self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
 	}
 	
 	func createAnimations() {

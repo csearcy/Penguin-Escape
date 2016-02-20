@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 //import CoreMotion
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
 	
 	let world = SKNode()
 	let ground = Ground()
@@ -18,6 +18,13 @@ class GameScene: SKScene {
 	var screenCenterY = CGFloat()
 	let initialPlayerPosition = CGPoint(x: 150, y: 250)
 	var playerProgress = CGFloat()
+	let encounterManager = EncounterManager()
+	var nextEncounterSpawnPosition = CGFloat(150)
+	let powerUpStar = Star()
+	var coinsCollected = 0
+	let hud = HUD()
+	var backgrounds:[Background] = []
+	let gameStartSound = SKAction.playSoundFileNamed("Sound/StartGame.aif", waitForCompletion: false)
 	//let motionManager = CMMotionManager()
 	
 	override func didMoveToView(view: SKView) {
@@ -47,9 +54,33 @@ class GameScene: SKScene {
 		// get the center of the screen
 		screenCenterY = self.size.height / 2
 		
-		let coin = Coin()
-		coin.spawn(world, position: CGPoint(x: 460, y: 250))
+		// set up initial encounter
+		encounterManager.addEncountersToWorld(self.world)
+		encounterManager.encounters[0].position = CGPoint(x: 300, y: 0)
 		
+		// spawn power up star
+		powerUpStar.spawn(world, position: CGPoint(x: -2000, y: -2000))
+		
+		// inform gameScene of contact events
+		self.physicsWorld.contactDelegate = self
+		
+		// create hud child nodes
+		hud.createHudNodes(self.size)
+		addChild(hud)
+		hud.zPosition = 50
+		
+		// spawn backgrounds
+		for _ in 0...3 {
+			backgrounds.append(Background())
+		}
+		
+		backgrounds[0].spawn(world, imageName: "Background-1", zPosition: -5, movementMultiplier: 0.75)
+		backgrounds[1].spawn(world, imageName: "Background-2", zPosition: -10, movementMultiplier: 0.5)
+		backgrounds[2].spawn(world, imageName: "Background-3", zPosition: -15, movementMultiplier: 0.2)
+		backgrounds[3].spawn(world, imageName: "Background-4", zPosition: -20, movementMultiplier: 0.1)
+		
+		// Play Start game sound
+		runAction(gameStartSound)
 	}
 	
 	override func didSimulatePhysics() {
@@ -76,6 +107,28 @@ class GameScene: SKScene {
 		// Track how far player has flown horizontally
 		playerProgress = player.position.x - initialPlayerPosition.x
 		ground.checkForReposition(playerProgress)
+		
+		
+		// Check to see if a new encounter should be set
+		if player.position.x > nextEncounterSpawnPosition {
+			encounterManager.placeNextEncounter(nextEncounterSpawnPosition)
+			nextEncounterSpawnPosition += 1400
+			let starRoll = Int(arc4random_uniform(10))
+			if starRoll == 0 {
+				if abs(player.position.x - powerUpStar.position.x) > 1200 {
+					// only move star if it's off the screen
+					let randomYPos = CGFloat(arc4random_uniform(400))
+					powerUpStar.position = CGPoint(x: nextEncounterSpawnPosition, y: randomYPos)
+					powerUpStar.physicsBody?.angularVelocity = 0
+					powerUpStar.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+				}
+			}
+		}
+		
+		// reposition backgrounds
+		for background in self.backgrounds {
+			background.updatePostition(playerProgress)
+		}
 	}
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -87,6 +140,14 @@ class GameScene: SKScene {
 			
 			if let gameSprite = nodeTouched as? GameSprite {
 				gameSprite.onTap()
+			}
+			
+			// Check hud buttons
+			if nodeTouched.name == "restartGame" {
+				self.view?.presentScene(GameScene(size: self.size), transition: .crossFadeWithDuration(0.6))
+			} else if nodeTouched.name == "returnToMenu" {
+				self.view?.presentScene(MenuScene(size: self.size), transition: .crossFadeWithDuration(0.6))
+
 			}
 		}
 		
@@ -133,4 +194,52 @@ class GameScene: SKScene {
 		}
 		*/
 	}
+	
+	func didBeginContact(contact: SKPhysicsContact) {
+		// determine which body is the penguin
+		let otherBody:SKPhysicsBody
+		let penguinMask = PhysicsCategory.penguin.rawValue | PhysicsCategory.damagedPenguin.rawValue
+		
+		if (contact.bodyA.categoryBitMask & penguinMask) > 0 {
+			// body A is penguin
+			otherBody = contact.bodyB
+		} else {
+			// body B is the penguin
+			otherBody = contact.bodyA
+		}
+		
+		switch otherBody.categoryBitMask {
+		case PhysicsCategory.ground.rawValue:
+			player.takeDamage()
+			hud.setHealthDisplay(player.health)
+		case PhysicsCategory.enemy.rawValue:
+			player.takeDamage()
+			hud.setHealthDisplay(player.health)
+		case PhysicsCategory.coin.rawValue:
+			if let coin = otherBody.node as? Coin {
+				coin.collect()
+				self.coinsCollected += coin.value
+				hud.setCoinCountDisplay(self.coinsCollected)
+			}
+		case PhysicsCategory.powerup.rawValue:
+			player.starPower()
+		default:
+			print("Contact with no game logic")
+		}
+	}
+	
+	func gameOver() {
+		hud.showButtons()
+	}
+	
 }
+
+enum PhysicsCategory:UInt32 {
+	case penguin = 1
+	case damagedPenguin = 2
+	case ground = 4
+	case enemy = 8
+	case coin = 16
+	case powerup = 32
+}
+
