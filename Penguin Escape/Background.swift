@@ -31,6 +31,13 @@ class Background: SKSpriteNode {
 			newBGNode.position = CGPoint(x: i * Int(backgroundSize.width), y: 0)
 			self.addChild(newBGNode)
 		}
+		
+		// Create snow
+		let snow = SKEmitterNode(fileNamed: "Snow.sks")
+		snow!.particleZPosition = -1
+		self.addChild(snow!)
+		snow!.targetNode = self.parent
+		
 	}
 	
 	func updatePostition(playerProgress:CGFloat) {

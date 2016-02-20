@@ -11,7 +11,7 @@ import SpriteKit
 import AudioToolbox
 
 // set global health value to be used by HUD and Gamescene to display health level
-let initialHealth = 5
+let initialHealth = 3
 
 class Player: SKSpriteNode, GameSprite {
 	
@@ -190,11 +190,11 @@ class Player: SKSpriteNode, GameSprite {
 	
 	func starPower() {
 		self.removeActionForKey("starPower")
-		self.forwardVelocity = 400
+		self.forwardVelocity += 200
 		self.invulnerable = true
 		
 		let starSequence = SKAction.sequence([SKAction.scaleTo(1.5, duration: 0.3), SKAction.waitForDuration(8), SKAction.scaleTo(1, duration: 1), SKAction.runBlock {
-				self.forwardVelocity = 200
+				self.forwardVelocity -= 200
 				self.invulnerable = false
 			}])
 		runAction(starSequence, withKey: "starPower")

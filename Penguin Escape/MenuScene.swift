@@ -53,6 +53,12 @@ class MenuScene: SKScene {
 		let pulseaction = SKAction.sequence([SKAction.fadeAlphaTo(0.7, duration: 0.9), SKAction.fadeAlphaTo(1, duration: 0.9)])
 		startButton.runAction(SKAction.repeatActionForever(pulseaction))
 		
+		// Create snow
+		let snow = SKEmitterNode(fileNamed: "Snow.sks")
+		snow!.particleZPosition = 17
+		self.addChild(snow!)
+		snow!.targetNode = self.parent
+		
 	}
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

@@ -41,6 +41,23 @@ class Star: SKSpriteNode, GameSprite {
 	}
 	
 	
+	func remove() {
+		// set animations for coin collecting
+		self.physicsBody?.categoryBitMask = 0
+		self.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+		let collectAnimation = SKAction.group([SKAction.fadeAlphaTo(0, duration: 0.2), SKAction.scaleTo(1.5, duration: 0.2), SKAction.moveBy(CGVector(dx: 0, dy: 25), duration: 0.2)])
+		let resetAfterCollected = SKAction.runBlock {
+			self.position.y	= 5000
+			self.alpha = 1
+			self.xScale = 1
+			self.yScale = 1
+			self.physicsBody?.categoryBitMask = PhysicsCategory.coin.rawValue
+		}
+		let collectSequence = SKAction.sequence([collectAnimation, resetAfterCollected])
+		runAction(collectSequence)
+	}
+
+	
 	func onTap() {
 		
 	}

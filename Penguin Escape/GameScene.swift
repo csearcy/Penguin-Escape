@@ -24,6 +24,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 	var coinsCollected = 0
 	let hud = HUD()
 	var backgrounds:[Background] = []
+	let encountersBeforeSpeedup = 2
+	var encountersPassed = 0
 	let gameStartSound = SKAction.playSoundFileNamed("Sound/StartGame.aif", waitForCompletion: false)
 	//let motionManager = CMMotionManager()
 	
@@ -111,6 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		
 		// Check to see if a new encounter should be set
 		if player.position.x > nextEncounterSpawnPosition {
+			encountersPassed++
 			encounterManager.placeNextEncounter(nextEncounterSpawnPosition)
 			nextEncounterSpawnPosition += 1400
 			let starRoll = Int(arc4random_uniform(10))
@@ -124,6 +127,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 				}
 			}
 		}
+		
+		// speed up player as encounters pass
+		if encountersPassed > 1 && player.forwardVelocity < 400 {
+			player.forwardVelocity += 25
+			encountersPassed = 0
+		}
+		
+		/*for (var i = 0; i < encountersBeforeSpeedup; ++i) {
+			
+		}
+		*/
 		
 		// reposition backgrounds
 		for background in self.backgrounds {
@@ -215,6 +229,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		case PhysicsCategory.enemy.rawValue:
 			player.takeDamage()
 			hud.setHealthDisplay(player.health)
+			removeEnemy(otherBody.node!)
 		case PhysicsCategory.coin.rawValue:
 			if let coin = otherBody.node as? Coin {
 				coin.collect()
@@ -223,6 +238,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 			}
 		case PhysicsCategory.powerup.rawValue:
 			player.starPower()
+			if let star = otherBody.node as? Star {
+				star.remove()
+			}
 		default:
 			print("Contact with no game logic")
 		}
@@ -232,6 +250,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 		hud.showButtons()
 	}
 	
+	func removeEnemy(enemy: SKNode) {
+		if let enemy = enemy as? Bat {
+			enemy.remove()
+		}
+		if let enemy = enemy as? Bee {
+			enemy.remove()
+		}
+		if let enemy = enemy as? Ghost {
+			enemy.remove()
+		}
+		if let enemy = enemy as? MadFly {
+			enemy.remove()
+		}
+	}
 }
 
 enum PhysicsCategory:UInt32 {

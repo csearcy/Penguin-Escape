@@ -14,6 +14,7 @@
 		9724DBCF1C76C419009A813C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9724DBCD1C76C419009A813C /* spark.png */; };
 		9724DBD11C76CE62009A813C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9724DBD01C76CE62009A813C /* MenuScene.swift */; };
 		975BC1E31C77DB8F00DF8150 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = 975BC1E21C77DB8F00DF8150 /* Sound */; };
+		975BC1E71C7809DD00DF8150 /* Snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 975BC1E61C7809DD00DF8150 /* Snow.sks */; };
 		977999441C72984700F86B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999431C72984700F86B8D /* AppDelegate.swift */; };
 		977999461C72984700F86B8D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 977999451C72984700F86B8D /* art.scnassets */; };
 		977999481C72984700F86B8D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977999471C72984700F86B8D /* GameViewController.swift */; };
@@ -69,6 +70,7 @@
 		9724DBCD1C76C419009A813C /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		9724DBD01C76CE62009A813C /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		975BC1E21C77DB8F00DF8150 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
+		975BC1E61C7809DD00DF8150 /* Snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Snow.sks; sourceTree = "<group>"; };
 		977999401C72984700F86B8D /* Penguin Escape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Penguin Escape.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		977999431C72984700F86B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		977999451C72984700F86B8D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				977999431C72984700F86B8D /* AppDelegate.swift */,
 				97F8DE351C7549BF00A129F8 /* Bat.swift */,
 				9724DBCC1C76C419009A813C /* PlayerPath.sks */,
+				975BC1E61C7809DD00DF8150 /* Snow.sks */,
 				9724DBCD1C76C419009A813C /* spark.png */,
 				9724DBCA1C76AE80009A813C /* Background.swift */,
 				9724DBC81C769E6C009A813C /* HUD.swift */,
@@ -338,6 +341,7 @@
 				977999501C72984700F86B8D /* LaunchScreen.storyboard in Resources */,
 				9724DBCE1C76C419009A813C /* PlayerPath.sks in Resources */,
 				9779994D1C72984700F86B8D /* Assets.xcassets in Resources */,
+				975BC1E71C7809DD00DF8150 /* Snow.sks in Resources */,
 				975BC1E31C77DB8F00DF8150 /* Sound in Resources */,
 				9779994B1C72984700F86B8D /* Main.storyboard in Resources */,
 			);
